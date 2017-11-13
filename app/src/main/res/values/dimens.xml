@@ -3,4 +3,5 @@
     <dimen name="largeTextSize">20sp</dimen>
     <dimen name="buttonSize">110dp</dimen>
     <dimen name="padding">16dp</dimen>
+    <dimen name="largMargin">8dp</dimen>
 </resources>

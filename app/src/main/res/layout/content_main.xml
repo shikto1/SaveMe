@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:padding="16dp"
     tools:context="com.example.shishir.trackme.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -19,29 +20,29 @@
         <Button
             android:id="@+id/contact"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="80dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:background="@drawable/back_of_normal_button"
             android:text="Contact"
             android:textColor="@color/white" />
 
         <Button
             android:id="@+id/interval"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/padding"
-            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="@dimen/largMargin"
+            android:layout_weight="1"
+            android:background="@drawable/back_of_normal_button"
             android:text="Interval"
             android:textColor="@color/white" />
 
         <Button
             android:id="@+id/sms"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/padding"
-            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="@dimen/largMargin"
+            android:layout_weight="1"
+            android:background="@drawable/back_of_normal_button"
             android:text="SMS"
             android:textColor="@color/white" />
 
@@ -56,6 +57,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
         android:background="@drawable/circle_button_start"
+        android:elevation="@dimen/largMargin"
         android:text="START"
         android:textColor="@color/white"
         android:textSize="@dimen/largeTextSize" />
