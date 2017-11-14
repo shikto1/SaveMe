@@ -1,7 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="mediumTextSize">16sp</dimen>
     <dimen name="largeTextSize">20sp</dimen>
     <dimen name="buttonSize">110dp</dimen>
     <dimen name="padding">16dp</dimen>
     <dimen name="largMargin">8dp</dimen>
+    <dimen name="smallMargin">4dp</dimen>
+    <dimen name="smallButtonSize">70dp</dimen>
 </resources>
