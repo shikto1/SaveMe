@@ -2,6 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="#4caf50"
     tools:context="com.example.shishir.trackme.Fragment.Second_Page">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I am Second Screen"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/largeTextSize"/>
+
 </RelativeLayout>

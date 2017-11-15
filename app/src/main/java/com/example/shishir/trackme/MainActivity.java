@@ -36,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        localDatabase = new LocalDatabase(this);
+        if (!localDatabase.OnBoardingIsVisited()) {
+            startActivity(new Intent(this, OnboardingActivity.class));
+            finish();
+        }
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("Track Me");
         findViewById();
@@ -48,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contactBtn = (Button) findViewById(R.id.contact);
         intervalBtn = (Button) findViewById(R.id.interval);
         smsFormatBtn = (Button) findViewById(R.id.sms);
-        localDatabase = new LocalDatabase(this);
 
 
         contactBtn.setOnClickListener(this);

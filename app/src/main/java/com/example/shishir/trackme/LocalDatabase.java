@@ -32,4 +32,12 @@ public class LocalDatabase {
     public boolean serviceIsRunning() {
         return sharedPreferences.getBoolean("running", false);
     }
+
+    public void setOnboarding(boolean visited) {
+        editor.putBoolean("visited", visited).commit();
+    }
+
+    public boolean OnBoardingIsVisited() {
+        return sharedPreferences.getBoolean("visited", false);
+    }
 }

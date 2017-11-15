@@ -24,7 +24,11 @@
 
         <service android:name=".MyService" />
 
-        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".ContactActivity" />
+        <activity
+            android:name=".OnboardingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
