@@ -20,17 +20,20 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button startStopButton;
+    private  ImageButton settingBtn;
 
 
     private LocationManager locationManager;
     private static boolean gpsIsEnabled = false;
     private static boolean receiverIsRegistered = false;
+    private TextView serviceTv;
     private LocalDatabase localDatabase;
-    private Button contactBtn, intervalBtn, smsFormatBtn;
 
 
     @Override
@@ -49,18 +52,14 @@ public class MainActivity extends AppCompatActivity {
     private void findViewById() {
         startStopButton = (Button) findViewById(R.id.startStopButton);
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-//        contactBtn = (Button) findViewById(R.id.contact);
-//        intervalBtn = (Button) findViewById(R.id.interval);
-//        smsFormatBtn = (Button) findViewById(R.id.sms);
-
-
-//        contactBtn.setOnClickListener(this);
-//        intervalBtn.setOnClickListener(this);
-//        smsFormatBtn.setOnClickListener(this);
+        settingBtn = (ImageButton) findViewById(R.id.settingBtn);
+        serviceTv=(TextView)findViewById(R.id.service);
+        settingBtn.setOnClickListener(this);
 
         if (localDatabase.serviceIsRunning()) {
             startStopButton.setBackgroundResource(R.drawable.circle_button_stop);
             startStopButton.setText("STOP");
+            serviceTv.setVisibility(View.VISIBLE);
         }
 
         if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -93,12 +92,14 @@ public class MainActivity extends AppCompatActivity {
     private void stopMyService() {
         stopService(new Intent(this, MyService.class));
         localDatabase.setServiceRunning(false);
+        serviceTv.setVisibility(View.INVISIBLE);
     }
 
 
     private void startMyService() {
         startService(new Intent(this, MyService.class));
         localDatabase.setServiceRunning(true);
+        serviceTv.setVisibility(View.VISIBLE);
     }
 
 
@@ -177,22 +178,10 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        int id = v.getId();
-//        Intent intent = new Intent(this, ContactActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        if (id == R.id.contact) {
-//            intent.putExtra("from", "contact");
-//            startActivity(intent);
-//            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-//        } else if (id == R.id.interval) {
-//            intent.putExtra("from", "interval");
-//            startActivity(intent);
-//            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-//        } else if (id == R.id.sms) {
-//            intent.putExtra("from", "sms");
-//            startActivity(intent);
-//            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-//        }
-//    }
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(this, ContactActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+    }
 }

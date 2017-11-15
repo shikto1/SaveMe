@@ -5,33 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:padding="16dp"
     tools:context="com.example.shishir.trackme.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ImageButton
+        android:id="@+id/settingBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/icon_setting" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/settingBtn"
+        android:background="@color/white" />
+
     <ImageView
-        android:src="@drawable/save_me"
         android:id="@+id/hhh"
         android:layout_width="wrap_content"
         android:layout_height="90dp"
-        android:text="SAVE ME"
+        android:layout_below="@+id/settingBtn"
+        android:layout_centerHorizontal="true"
         android:paddingLeft="@dimen/padding"
         android:paddingRight="@dimen/padding"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/padding"
+        android:layout_marginRight="@dimen/padding"
+        android:src="@drawable/save_me"
+        android:text="SAVE ME"
         android:layout_marginTop="@dimen/padding"
-        android:textSize="@dimen/titleSize"/>
+        android:textSize="@dimen/titleSize" />
+    <TextView
+        android:layout_below="@id/hhh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:text="To enable press START button below."
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallTextSize"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/startStopButton"
+        android:layout_above="@+id/service"
         android:layout_width="@dimen/buttonSize"
         android:layout_height="@dimen/buttonSize"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
         android:background="@drawable/circle_button_start"
         android:elevation="@dimen/largMargin"
         android:text="START"
         android:textColor="@color/white"
         android:textSize="@dimen/largeTextSize" />
+    <TextView
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:padding="@dimen/padding"
+        android:text="Service is Running..."
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallTextSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"/>
+
 
 </RelativeLayout>
