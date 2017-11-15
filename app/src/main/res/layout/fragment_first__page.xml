@@ -3,21 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    android:padding="@dimen/padding"
     tools:context="com.example.shishir.trackme.Fragment.First_Page">
-    <TextView
+    <ImageView
+        android:src="@drawable/contact_white"
         android:id="@+id/hhh"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CONTACT"
-        android:textColor="@color/white"
+        android:layout_height="90dp"
+        android:padding="@dimen/padding"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/padding"
-        android:textSize="50sp"/>
+        android:layout_marginTop="@dimen/largePadding" />
     <TextView
         android:layout_marginTop="@dimen/padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingRight="@dimen/padding"
+        android:paddingLeft="@dimen/padding"
         android:gravity="center"
         android:layout_below="@id/hhh"
         android:layout_marginBottom="@dimen/smallMargin"
@@ -30,6 +30,7 @@
         android:id="@+id/contactLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:visibility="visible">
@@ -66,5 +67,16 @@
 
 
     </LinearLayout>
+    <Button
+        android:id="@+id/nextAtContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textAppearance="@android:style/TextAppearance"/>
+
 
 </RelativeLayout>

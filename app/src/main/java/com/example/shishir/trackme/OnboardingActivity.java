@@ -21,7 +21,6 @@ public class OnboardingActivity extends AppCompatActivity {
 
 
     private ViewPager viewPager;
-    private Button next;
     private LocalDatabase localDatabase;
     private RadioGroup radioGroup;
 
@@ -31,7 +30,6 @@ public class OnboardingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_onboarding);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-        next = (Button) findViewById(R.id.next);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         viewPager.setAdapter(adapter);
 
@@ -39,36 +37,31 @@ public class OnboardingActivity extends AppCompatActivity {
         radioGroup.getChildAt(0).setEnabled(true);
         radioGroup.check(R.id.one);
 
-
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int currentITem = viewPager.getCurrentItem();
-                if (currentITem == 2) {
-                    finishOnBoarding();
-                } else {
-                    if (currentITem == 1) {
-                        radioGroup.getChildAt(1).setEnabled(false);
-                        radioGroup.getChildAt(2).setEnabled(true);
-                        radioGroup.check(R.id.three);
-                        next.setText("Done");
-                    }
-                    if (currentITem == 0) {
-                        radioGroup.getChildAt(0).setEnabled(false);
-                        radioGroup.getChildAt(1).setEnabled(true);
-                        radioGroup.check(R.id.two);
-                    }
-                    viewPager.setCurrentItem(currentITem + 1, true);
-                }
-            }
-        });
-
         viewPager.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return true;
             }
         });
+
+    }
+
+    public void changePage(int currentITem) {
+        if (currentITem == 2) {
+            finishOnBoarding();
+        } else {
+            if (currentITem == 1) {
+                radioGroup.getChildAt(1).setEnabled(false);
+                radioGroup.getChildAt(2).setEnabled(true);
+                radioGroup.check(R.id.three);
+            }
+            if (currentITem == 0) {
+                radioGroup.getChildAt(0).setEnabled(false);
+                radioGroup.getChildAt(1).setEnabled(true);
+                radioGroup.check(R.id.two);
+            }
+            viewPager.setCurrentItem(currentITem + 1, true);
+        }
 
     }
 

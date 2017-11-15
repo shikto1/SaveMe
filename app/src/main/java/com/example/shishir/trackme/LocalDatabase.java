@@ -40,4 +40,26 @@ public class LocalDatabase {
     public boolean OnBoardingIsVisited() {
         return sharedPreferences.getBoolean("visited", false);
     }
+
+    public void setMessageFormat(String smsFormat) {
+        editor.putString("sms", smsFormat).commit();
+    }
+
+    public String getSmsFormat() {
+        return sharedPreferences.getString("sms", "");
+    }
+
+    public void setContactOne(String contactOne) {
+        editor.putString("c1",contactOne).commit();
+    }
+
+    public void setContactTwo(String contactTwo) {
+        editor.putString("c2",contactTwo).commit();
+    }
+    public String getContactOne(){
+        return sharedPreferences.getString("c1","");
+    }
+    public String getContactTwo(){
+        return sharedPreferences.getString("c2","");
+    }
 }

@@ -3,24 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e57373"
-    android:padding="@dimen/padding"
     tools:context="com.example.shishir.trackme.Fragment.Third_Page">
 
-    <TextView
+    <ImageView
+        android:src="@drawable/sms_format"
         android:id="@+id/hhh"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="90dp"
+        android:padding="@dimen/padding"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/padding"
-        android:text="SMS FORMAT"
-        android:textColor="@color/white"
-        android:textSize="50sp" />
+        android:layout_marginTop="@dimen/largePadding" />
 
     <TextView
         android:layout_marginTop="@dimen/padding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingRight="@dimen/padding"
+        android:paddingLeft="@dimen/padding"
         android:layout_below="@id/hhh"
         android:layout_marginBottom="@dimen/smallMargin"
         android:text="@string/smsFormat"
@@ -33,10 +33,13 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
+        android:paddingRight="@dimen/padding"
+        android:paddingLeft="@dimen/padding"
         android:visibility="visible">
 
 
         <EditText
+            android:id="@+id/smsFormat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/back_of_sms_format"
@@ -49,4 +52,15 @@
             android:textSize="@dimen/mediumTextSize" />
 
     </LinearLayout>
+    <Button
+        android:id="@+id/nextAtSmsFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="Done"
+        android:textColor="@color/white"
+        android:textAppearance="@android:style/TextAppearance"/>
+
 </RelativeLayout>
