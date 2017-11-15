@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/padding"
-            android:background="@drawable/back_of_interval_layout"
+            android:background="@drawable/back_of_sms_format"
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingBottom="@dimen/largMargin"

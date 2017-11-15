@@ -3,13 +3,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
+    android:padding="@dimen/padding"
     tools:context="com.example.shishir.trackme.Fragment.First_Page">
     <TextView
+        android:id="@+id/hhh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am First Screen"
+        android:text="CONTACT"
         android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding"
+        android:textSize="50sp"/>
+    <TextView
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/hhh"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/contactDetails"
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallTextSize" />
+
+
+    <LinearLayout
+        android:id="@+id/contactLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textSize="@dimen/largeTextSize"/>
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+            <EditText
+                android:id="@+id/contactOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_of_normal_button"
+                android:gravity="center_vertical"
+                android:hint="Contact 1"
+                android:padding="@dimen/padding"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <EditText
+                android:id="@+id/contactTwo"
+                android:layout_marginTop="@dimen/largMargin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_of_normal_button"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:hint="Contact 2"
+                android:padding="@dimen/padding"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/mediumTextSize" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

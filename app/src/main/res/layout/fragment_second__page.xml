@@ -3,13 +3,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4caf50"
+    android:padding="@dimen/padding"
     tools:context="com.example.shishir.trackme.Fragment.Second_Page">
+
     <TextView
+        android:id="@+id/hhh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am Second Screen"
+        android:text="INTERVAL"
         android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/padding"
+        android:textSize="50sp"/>
+    <TextView
+        android:layout_marginTop="@dimen/padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/hhh"
+        android:layout_marginBottom="@dimen/smallMargin"
+        android:text="@string/intervalDetails"
+        android:textColor="@color/white"
+        android:textSize="@dimen/smallTextSize" />
+
+    <LinearLayout
+        android:id="@+id/intervalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_centerInParent="true"
-        android:textSize="@dimen/largeTextSize"/>
+        android:paddingBottom="@dimen/largMargin"
+        android:paddingTop="@dimen/largMargin"
+        android:visibility="visible">
+
+        <Button
+            android:layout_width="@dimen/smallButtonSize"
+            android:layout_height="@dimen/smallButtonSize"
+            android:layout_marginRight="@dimen/smallMargin"
+            android:background="@drawable/circle_button_stop"
+            android:text="5 Min"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="@dimen/smallButtonSize"
+            android:layout_height="@dimen/smallButtonSize"
+            android:layout_marginRight="@dimen/smallMargin"
+            android:background="@drawable/circle_button_stop"
+            android:text="10 Min"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="@dimen/smallButtonSize"
+            android:layout_height="@dimen/smallButtonSize"
+            android:layout_marginRight="@dimen/smallMargin"
+            android:background="@drawable/circle_button_stop"
+            android:text="20 Min"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="@dimen/smallButtonSize"
+            android:layout_height="@dimen/smallButtonSize"
+            android:background="@drawable/circle_button_stop"
+            android:text="30 Min"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
 </RelativeLayout>

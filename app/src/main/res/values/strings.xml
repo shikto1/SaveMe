@@ -4,4 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="smsFormat">Write a message format here that you want to send to your contact in case of your danger.</string>
+    <string name="intervalDetails">In case of your danger we will send your location. So select the time interval between two messages</string>
+    <string name="contactDetails">You must add at least one contact to which you want to send your location in case of your danger</string>
 </resources>

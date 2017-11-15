@@ -9,4 +9,10 @@
     <color name="yellow">#FBD872</color>
     <color name="red">#F25369</color>
     <color name="offWhite">#BFC2C9</color>
+
+    <color name="green">#4caf50</color>
+    <color name="greenDark">#087f23</color>
+
+    <color name="orange">#e57373</color>
+    <color name="orangeDark">#af4448</color>
 </resources>
