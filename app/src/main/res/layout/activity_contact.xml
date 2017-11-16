@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,123 +14,102 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/contactLayout"
+
+        <EditText
+            android:id="@+id/contactOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp">
-
-                <TextView
-                    android:id="@+id/contactOne"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    android:gravity="center_vertical"
-                    android:hint="Contact 1"
-                    android:padding="10dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="@dimen/mediumTextSize" />
-
-                <Button
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/smallMargin"
-                    android:background="@color/colorAccent"
-                    android:text="ADD"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/mediumTextSize" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:layout_marginTop="@dimen/smallMargin">
-
-                <TextView
-                    android:id="@+id/contactTwo"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    android:gravity="center_vertical"
-                    android:hint="Contact 1"
-                    android:padding="10dp"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
-                    android:textSize="@dimen/mediumTextSize" />
-
-                <Button
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/smallMargin"
-                    android:background="@color/colorAccent"
-                    android:text="ADD"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/mediumTextSize" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Interval:"
+            android:background="@drawable/back_of_normal_button"
+            android:gravity="center_vertical"
+            android:hint="Contact 1"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/padding"
             android:textColor="@color/white"
-            android:textSize="@dimen/mediumTextSize"
-            android:layout_marginBottom="@dimen/smallMargin"/>
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <EditText
+            android:id="@+id/contactTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/largMargin"
+            android:background="@drawable/back_of_normal_button"
+            android:gravity="center_vertical"
+            android:hint="Contact 2"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:padding="@dimen/padding"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="@dimen/padding"
+            android:layout_marginTop="@dimen/largePadding"
+            android:background="@color/white" />
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="@dimen/smallMargin"-->
+        <!--android:text="Interval:"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/mediumTextSize" />-->
 
         <LinearLayout
             android:id="@+id/intervalLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding"
-            android:background="@drawable/back_of_sms_format"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/largMargin"
-            android:paddingTop="@dimen/largMargin"
             android:visibility="visible">
 
             <Button
+                android:id="@+id/fiveMin"
                 android:layout_width="@dimen/smallButtonSize"
                 android:layout_height="@dimen/smallButtonSize"
                 android:layout_marginRight="@dimen/smallMargin"
-                android:background="@drawable/circle_button_stop"
+                android:background="@drawable/circle_button_start"
                 android:text="5 Min"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/tenMin"
                 android:layout_width="@dimen/smallButtonSize"
                 android:layout_height="@dimen/smallButtonSize"
                 android:layout_marginRight="@dimen/smallMargin"
-                android:background="@drawable/circle_button_stop"
+                android:background="@drawable/circle_button_start"
                 android:text="10 Min"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/twentyMin"
                 android:layout_width="@dimen/smallButtonSize"
                 android:layout_height="@dimen/smallButtonSize"
                 android:layout_marginRight="@dimen/smallMargin"
-                android:background="@drawable/circle_button_stop"
+                android:background="@drawable/circle_button_start"
                 android:text="20 Min"
                 android:textColor="@color/white" />
 
             <Button
+                android:id="@+id/thirtyMin"
                 android:layout_width="@dimen/smallButtonSize"
                 android:layout_height="@dimen/smallButtonSize"
-                android:background="@drawable/circle_button_stop"
+                android:background="@drawable/circle_button_start"
                 android:text="30 Min"
                 android:textColor="@color/white" />
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="@dimen/largePadding"
+            android:layout_marginTop="@dimen/padding"
+            android:background="@color/white" />
 
         <LinearLayout
             android:id="@+id/messageFormatLayout"
@@ -139,13 +118,13 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/smallMargin"
-                android:text="Message Format:"
-                android:textColor="@color/white"
-                android:textSize="@dimen/mediumTextSize" />
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/smallMargin"-->
+            <!--android:text="Message Format:"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/mediumTextSize" />-->
 
             <EditText
                 android:layout_width="match_parent"
@@ -156,12 +135,12 @@
                 android:lines="6"
                 android:padding="@dimen/padding"
                 android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="@dimen/mediumTextSize" />
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/mediumTextSize"
+                android:visibility="visible" />
 
         </LinearLayout>
 
-
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

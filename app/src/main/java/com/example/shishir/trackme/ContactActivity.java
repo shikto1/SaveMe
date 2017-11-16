@@ -17,17 +17,6 @@ public class ContactActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contact);
 
         findViewById();
-        Intent intent = getIntent();
-//        if (intent != null) {
-//            String from = intent.getStringExtra("from");
-//            if (from.equals("contact")) {
-//                contactL.setVisibility(View.VISIBLE);
-//            } else if (from.equals("interval")) {
-//                intervalL.setVisibility(View.VISIBLE);
-//            } else if (from.equals("sms")) {
-//                messageL.setVisibility(View.VISIBLE);
-//            }
-//        }
     }
 
     private void findViewById() {
