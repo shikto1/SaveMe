@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largePadding"
         android:orientation="vertical">
 
 
@@ -116,6 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding"
             android:visibility="visible">
 
             <!--<TextView-->
@@ -127,6 +129,7 @@
             <!--android:textSize="@dimen/mediumTextSize" />-->
 
             <EditText
+                android:id="@+id/messageFormat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/back_of_normal_button"
@@ -141,6 +144,16 @@
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/saveChanges"
+            android:textColor="@color/white"
+            android:textAppearance="@android:style/TextAppearance"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Changes"/>
     </LinearLayout>
 
 </ScrollView>
